@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yi Yang</title>
+<meta name="description" content="Yi Yang: machine learning and statistics projects, personal work and competitions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,400&family=Mulish:wght@400;500&family=Noto+Serif+SC:wght@300;400;500&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+
+<script>
+/* ==========================================================================
+   EDIT YOUR CONTENT HERE. Everything on the page is generated from this block.
+
+   To add a project, copy one { ... } entry into the matching list:
+     title    name of the project (required)
+     summary  one sentence on what it is useful for (required)
+     tools    list of methods or technologies
+     repo     GitHub link; leave it out if there is no repository
+     site     link to the live work, shown as "Open project"
+     link     any other link, such as a paper, demo or result page
+     details  longer text that opens under the entry; separate paragraphs with \n\n
+
+   Work experience is a plain timeline: each entry has only period, title and org.
+
+   Tech stack: add or remove names in each "tools" list.
+
+   Three languages: text is written as { en: "...", sv: "...", zh: "..." }.
+   A plain "text" is shown unchanged in every language; a missing language falls back to English.
+
+   A section with an empty list is hidden automatically.
+   ========================================================================== */
+const SITE = {
+  name: "Yi Yang",
+  intro: {
+    en: "Enthusiastic about data and machine learning, with four years of data-driven airport operations behind me. Now building ML systems at Ericsson. Away from the screen, I follow new technology, travel and spend time in nature.",
+    sv: "Jag brinner för data och maskininlärning och har fyra års erfarenhet av datadriven flygplatsverksamhet. Nu bygger jag ML-system på Ericsson. Utanför skärmen följer jag ny teknik, reser och är ute i naturen.",
+    zh: "热爱数据与机器学习，有四年数据驱动的机场运营经验，现在爱立信构建机器学习系统。屏幕之外，我关注新技术，喜欢旅行，也喜欢走进自然。",
+  },
+  links: [
+    { label: "GitHub", url: "https://github.com/YiYang-09" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/yi-y-liu" },
+    // { label: "Email", url: "mailto:you@example.com" },
+  ],
+  sections: [
+    {
+      id: "work", timeline: true,
+      title: { en: "Work experience", sv: "Arbetslivserfarenhet", zh: "工作经历" },
+      items: [
+        {
+          period: { en: "September 2026 to present", sv: "September 2026 till nu", zh: "2026 年 9 月至今" },
+          title: { en: "Machine Learning Engineer Intern, part-time", sv: "Praktikant som maskininlärningsingenjör, deltid", zh: "机器学习工程实习生（兼职）" },
+          org: { en: "Ericsson, Linköping", sv: "Ericsson, Linköping", zh: "爱立信，林雪平" },
+        },
+        {
+          period: { en: "June 2026 to August 2026", sv: "Juni 2026 till augusti 2026", zh: "2026 年 6 月至 8 月" },
+          title: { en: "Machine Learning Engineer Intern, summer", sv: "Praktikant som maskininlärningsingenjör, sommar", zh: "机器学习工程实习生（暑期）" },
+          org: { en: "Ericsson, Linköping", sv: "Ericsson, Linköping", zh: "爱立信，林雪平" },
+        },
+        {
+          period: { en: "January 2026 to June 2026", sv: "Januari 2026 till juni 2026", zh: "2026 年 1 月至 6 月" },
+          title: { en: "Master's thesis student", sv: "Examensarbetare, master", zh: "硕士论文实习生" },
+          org: { en: "Ericsson, with Linköping University", sv: "Ericsson, tillsammans med Linköpings universitet", zh: "爱立信，与林雪平大学合作" },
+        },
+      ],
+    },
+    {
+      id: "academic",
+      title: { en: "Academic projects", sv: "Akademiska projekt", zh: "学术项目" },
+      items: [
+        {
+          title: { en: "Neural network quantization for FPGA deployment", sv: "Kvantisering av neurala nätverk för FPGA", zh: "面向 FPGA 部署的神经网络量化" },
+          summary: {
+            en: "Shrinks a neural network that estimates skin perfusion so it can run on small FPGA hardware, with less loss of accuracy.",
+            sv: "Krymper ett neuralt nätverk som uppskattar hudperfusion så att det kan köras på liten FPGA-hårdvara, med mindre förlust av noggrannhet.",
+            zh: "压缩一个用于估计皮肤灌注的神经网络，让它能在小型 FPGA 硬件上运行，同时减少精度损失。",
+          },
+          tools: ["PyTorch", "Brevitas"],
+        },
+        {
+          title: { en: "Deep learning", sv: "Djupinlärning", zh: "深度学习" },
+          summary: {
+            en: "Models that recognise images and translate text, built up step by step from plain NumPy to a Vision Transformer.",
+            sv: "Modeller som känner igen bilder och översätter text, uppbyggda steg för steg från ren NumPy till en Vision Transformer.",
+            zh: "能识别图像、翻译文本的模型，从纯 NumPy 一步步搭建到 Vision Transformer。",
+          },
+          tools: ["TensorFlow", "Keras", "NumPy"],
+          repo: "https://github.com/YiYang-09/Deep-Learning",
+        },
+        {
+          title: { en: "Bayesian learning", sv: "Bayesiansk inlärning", zh: "贝叶斯学习" },
+          summary: {
+            en: "Estimates unknown quantities from data and shows how certain each estimate is.",
+            sv: "Skattar okända storheter från data och visar hur säker varje skattning är.",
+            zh: "从数据中估计未知量，并给出每个估计的可靠程度。",
+          },
+          tools: ["R", "MCMC"],
+          repo: "https://github.com/YiYang-09/Bayesian-Learning",
+        },
+        {
+          title: { en: "Big data analysis", sv: "Stordataanalys", zh: "大数据分析" },
+          summary: {
+            en: "Analyses datasets too large for one machine, including Swedish climate records, on a computing cluster.",
+            sv: "Analyserar datamängder som är för stora för en enda dator, bland annat svenska klimatdata, på ett beräkningskluster.",
+            zh: "在计算集群上分析单台机器处理不了的大规模数据，包括瑞典气候记录。",
+          },
+          tools: ["PySpark", "Spark SQL", "HPC"],
+          repo: "https://github.com/YiYang-09/Big-data-analysis",
+        },
+        {
+          title: { en: "Advanced data mining", sv: "Avancerad datautvinning", zh: "高级数据挖掘" },
+          summary: {
+            en: "Finds natural groups and recurring patterns hidden in data.",
+            sv: "Hittar naturliga grupper och återkommande mönster i data.",
+            zh: "发现数据中隐藏的自然分组和重复模式。",
+          },
+          tools: ["Weka"],
+          repo: "https://github.com/YiYang-09/Advanced-Data-Mining",
+        },
+      ],
+    },
+    {
+      id: "personal",
+      title: { en: "Personal projects", sv: "Egna projekt", zh: "个人项目" },
+      items: [
+        {
+          title: { en: "Coffee recommendation with SBERT", sv: "Kafferekommendationer med SBERT", zh: "基于 SBERT 的咖啡推荐" },
+          summary: {
+            en: "Describe the flavour you want in your own words, and it picks coffee beans to match, within your budget, roast and origin.",
+            sv: "Beskriv smaken du vill ha med egna ord, så väljer den kaffebönor som passar, inom din budget, rostning och ursprung.",
+            zh: "用自己的话描述想要的风味，它会在你的预算、烘焙度和产地范围内，帮你选出符合风味的咖啡豆。",
+          },
+          tools: ["Sentence-Transformers", "scikit-learn", "PyTorch"],
+          repo: "https://github.com/YiYang-09/CoffeeRecommendationUsingSBERT",
+          details: {
+            en: "Regex and fuzzy matching extract hard constraints from the query, which filter the catalogue exactly. The remaining flavour intent is matched against tasting notes with all-MiniLM-L6-v2 embeddings, and compared with a TF-IDF baseline.\n\nAverage cosine similarity rose by 32.5% to 221.6% depending on query style. An external BERTScore check showed the two systems roughly tied, so higher similarity alone does not prove better recommendations.",
+            sv: "Regex och fuzzy matching hämtar ut hårda krav ur frågan, och de filtrerar katalogen exakt. Den smak som återstår matchas mot smaknoter med all-MiniLM-L6-v2-inbäddningar och jämförs med en TF-IDF-baslinje.\n\nGenomsnittlig cosinuslikhet ökade med 32,5 % till 221,6 % beroende på frågestil. En extern BERTScore-kontroll visade att de två systemen låg ungefär lika, så högre likhet bevisar inte i sig bättre rekommendationer.",
+            zh: "先用正则和模糊匹配从查询中提取硬性条件，对目录做精确筛选；剩下的风味需求，用 all-MiniLM-L6-v2 嵌入与风味描述匹配，并与 TF-IDF 基线比较。\n\n根据查询风格不同，平均余弦相似度提升了 32.5% 到 221.6%。不过外部的 BERTScore 检验显示两个系统大致持平，所以相似度更高并不能单独证明推荐更好。",
+          },
+        },
+        {
+          title: { en: "EU truck electrification data pipeline", sv: "Datapipeline för elektrifiering av lastbilar i EU", zh: "欧盟卡车电动化数据管道" },
+          summary: {
+            en: "Turns Eurostat registration figures into a clean, checked dataset for following the shift to electric trucks across the EU.",
+            sv: "Gör Eurostats registreringssiffror till ett rent, kontrollerat dataset för att följa övergången till ellastbilar i EU.",
+            zh: "把 Eurostat 的注册数据整理成干净、经过校验的数据集，用于追踪欧盟卡车的电动化进程。",
+          },
+          tools: ["Python", "DuckDB", "SQL"],
+          repo: "https://github.com/YiYang-09/EU-Truck-Electrification",
+        },
+      ],
+    },
+    {
+      id: "competitions",
+      title: { en: "Competitions & hackathons", sv: "Tävlingar och hackathons", zh: "竞赛与 Hackathon" },
+      items: [
+        {
+          title: { en: "Nordic AI Cup 2026, 5th in Sweden", sv: "Nordic AI Cup 2026, femte plats i Sverige", zh: "Nordic AI Cup 2026，瑞典第五名" },
+          summary: {
+            en: "Keeps a species of herbivores alive in a simulated world, deciding when each animal should flee, forage or reproduce.",
+            sv: "Håller en art av växtätare vid liv i en simulerad värld genom att avgöra när varje djur ska fly, söka föda eller föröka sig.",
+            zh: "在模拟世界中让一群食草动物存活下来，决定每只动物何时逃跑、觅食或繁殖。",
+          },
+          tools: ["Python", "FastAPI", "PyTorch"],
+          repo: "https://github.com/YiYang-09/survival-simulator-agent",
+        },
+        {
+          title: { en: "LINHAC Hockey Analytics Competition, 1st place", sv: "LINHAC Hockey Analytics Competition, första plats", zh: "LINHAC 冰球分析竞赛，第一名" },
+          summary: {
+            en: "Reveals the play styles of hockey teams and what sets each style apart.",
+            sv: "Visar hockeylagens spelstilar och vad som skiljer dem åt.",
+            zh: "揭示冰球队的打法类型，以及每种打法的不同之处。",
+          },
+          tools: ["K-means", "XGBoost"],
+        },
+        {
+          title: "BeanLog, Lovable Buildathon",
+          summary: {
+            en: "Keeps track of the coffee beans you own: what's left after each cup, when each bag is at its peak, and how to brew it.",
+            sv: "Håller koll på dina kaffebönor: hur mycket som finns kvar efter varje kopp, när varje påse är som bäst och hur du ska brygga den.",
+            zh: "帮你管理手头的咖啡豆：每喝一杯自动更新余量，提示每袋豆子的最佳赏味期，并给出冲煮建议。",
+          },
+          site: "https://kaffeblog.lovable.app",
+        },
+      ],
+    },
+    {
+      id: "stack",
+      title: { en: "Tech stack", sv: "Teknikstack", zh: "技术栈" },
+      groups: [
+        { name: { en: "Languages", sv: "Språk", zh: "编程语言" }, tools: ["Python", "SQL", "Cypher", "R"] },
+        { name: "LLM", tools: ["GraphRAG", "Text-to-Cypher", "Prompt design", "LLM evaluation", "Uncertainty estimation"] },
+        { name: { en: "Data and deployment", sv: "Data och driftsättning", zh: "数据与部署" }, tools: ["Neo4j", "DuckDB", "PySpark", "FastAPI", "Docker", "GitLab CI", "AWS S3"] },
+      ],
+    },
+  ],
+};
+
+const UI = {
+  code: { en: "View code", sv: "Visa kod", zh: "查看代码" },
+  site: { en: "Open project", sv: "Öppna projektet", zh: "打开作品" },
+  result: { en: "View result", sv: "Visa resultat", zh: "查看结果" },
+  more: { en: "Read more", sv: "Läs mer", zh: "了解更多" },
+};
+const LANGUAGES = [["en", "EN", "English"], ["sv", "SV", "Svenska"], ["zh", "中文", "中文"]];
+</script>
+
+<style>
+:root {
+  --fog: #F6F5FA;
+  --ink: #3D4270;
+  --soft-ink: #62668F;
+  --periwinkle: #8C95CC;
+  --rose: #E8BFC4;
+  --link: #565AA3;
+  --serif: "Cormorant", "Noto Serif SC", Georgia, serif;
+  --sans: "Mulish", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+  --gutter: clamp(20px, 5vw, 80px);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--fog); color: var(--ink); font: 400 1.0625rem/1.65 var(--sans); }
+a { color: inherit; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+
+.hero { position: relative; min-height: 100svh; padding: 28px var(--gutter) clamp(36px, 7vh, 72px); display: flex; flex-direction: column; overflow: hidden;
+  background: radial-gradient(60% 70% at 76% 44%, #F9E8E4 0%, rgba(249,232,228,0) 70%), var(--fog); }
+#sky { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero > nav, .hero-text { position: relative; }
+.hero > nav { z-index: 2; display: flex; justify-content: flex-end; align-items: baseline; flex-wrap: wrap; gap: 8px 28px; font-weight: 500; font-size: 1rem; }
+.lang { display: flex; gap: 14px; margin-right: auto; }
+.lang button { padding: 2px 0; border: 0; background: none; color: var(--soft-ink); font: inherit; cursor: pointer; }
+.lang button[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+html[lang="zh-CN"] .chapter > h2, html[lang="zh-CN"] .jump { font-style: normal; }
+html[lang="zh-CN"] body { line-height: 1.8; }
+.hero-text { margin-top: auto; max-width: 35rem; isolation: isolate; }
+.hero-text::before { pointer-events: none; content: ""; position: absolute; z-index: -1; inset: -12% -14% -18% -30%; background: radial-gradient(closest-side, rgba(246,245,250,.97) 62%, rgba(246,245,250,0) 100%); }
+h1 { margin: 0 0 .1em -.02em; font: 300 clamp(5.25rem, 13vw, 12.5rem)/.95 var(--serif); letter-spacing: -.02em; white-space: nowrap; }
+.intro { margin: 0 0 24px; font-size: clamp(1.0625rem, 1.5vw, 1.25rem); line-height: 1.6; }
+.jump { display: flex; flex-wrap: wrap; gap: 8px 28px; font: italic 400 1.5rem/1.3 var(--serif); }
+.jump a { color: var(--link); }
+
+.contours { clip-path: inset(0 100% 0 0); animation: unveil 3s cubic-bezier(.3,.1,.3,1) .1s forwards; }
+.trail { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 3.4s ease-in-out .9s forwards; }
+.after { opacity: 0; animation: appear 1s ease-out 3.6s forwards; }
+.plane { opacity: 0; animation: appear 1s ease-out 1.1s forwards; }
+.still * , .still { animation: none !important; clip-path: none !important; }
+.still .trail { stroke-dashoffset: 0; }
+.still .after, .still .plane { opacity: 1; }
+@keyframes unveil { to { clip-path: inset(0 0 0 0); } }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes appear { to { opacity: 1; } }
+
+.chapter { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 24px clamp(32px, 6vw, 96px); padding: clamp(72px, 10vw, 136px) var(--gutter) 0; }
+.chapter:last-of-type { padding-bottom: clamp(72px, 10vw, 136px); }
+.chapter > h2 { margin: 0; font: italic 400 clamp(2.25rem, 4vw, 3.25rem)/1.1 var(--serif); position: sticky; top: 40px; align-self: start; }
+.entry { margin-bottom: clamp(36px, 4.5vw, 56px); max-width: 40rem; }
+.entry:last-child { margin-bottom: 0; }
+.entry h3 { display: inline-block; position: relative; margin: 0 0 6px; padding-bottom: 8px; font: 400 clamp(1.75rem, 2.6vw, 2.25rem)/1.15 var(--serif); }
+.entry h3::after { content: ""; position: absolute; left: 0; bottom: 0; height: 8px; width: 100%; clip-path: inset(0 100% 0 0); transition: clip-path .6s ease-out;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 8' preserveAspectRatio='none'%3E%3Cpath d='M0 6.5C90 1 200 .5 400 5' fill='none' stroke='%238C95CC' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") left/100% 100% no-repeat; }
+.entry:hover h3::after, .entry:focus-within h3::after { clip-path: inset(0 0 0 0); }
+.entry h3, .timeline h3, .chapter > h2 { overflow-wrap: break-word; hyphens: auto; }
+.entry p { margin: 0; }
+.timeline { list-style: none; margin: 0; padding: 0 0 0 26px; border-left: 1px solid var(--periwinkle); max-width: 40rem; }
+.timeline li { position: relative; padding-bottom: clamp(28px, 3.5vw, 40px); }
+.timeline li:last-child { padding-bottom: 0; }
+.timeline li::before { content: ""; position: absolute; left: -31px; top: .45em; width: 9px; height: 9px; border-radius: 50%; background: var(--rose); box-shadow: 0 0 0 1px var(--periwinkle); }
+.timeline .period { font-size: .9375rem; color: var(--soft-ink); }
+.timeline h3 { margin: 0; font: 400 clamp(1.75rem, 2.6vw, 2.25rem)/1.15 var(--serif); }
+.timeline .org { margin: 2px 0 0; }
+.meta { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px 24px; font-size: .9375rem; color: var(--soft-ink); }
+.meta a { color: var(--link); font-weight: 500; }
+details { margin-top: 8px; }
+summary { cursor: pointer; color: var(--link); font-weight: 500; font-size: .9375rem; width: fit-content; }
+details > div { padding-top: 8px; }
+.entry details p + p { margin-top: .8em; }
+
+.stack { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px clamp(24px, 4vw, 56px); max-width: 46rem; }
+.stack h3 { margin: 0 0 12px; padding-bottom: 10px; border-bottom: 1px solid var(--periwinkle); font: 500 1rem/1.4 var(--sans); color: var(--soft-ink); }
+.stack ul { list-style: none; margin: 0; padding: 0; }
+.stack li { font: 400 clamp(1.5rem, 2.2vw, 1.875rem)/1.45 var(--serif); }
+
+footer { padding: 32px var(--gutter) 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 28px; font-size: .9375rem; color: var(--soft-ink); }
+footer div { display: flex; gap: 28px; }
+
+@media (max-width: 900px) {
+  .chapter { grid-template-columns: minmax(0, 1fr); }
+  .chapter > h2 { position: static; margin-bottom: 8px; }
+}
+@media (max-width: 520px) {
+  .stack { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .contours, .trail, .after, .plane { animation: none; clip-path: none; stroke-dashoffset: 0; opacity: 1; }
+  .entry h3::after { transition: none; }
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <svg id="sky" aria-hidden="true"></svg>
+  <nav aria-label="Language"><div class="lang" id="lang"></div></nav>
+  <div class="hero-text">
+    <h1 id="name"></h1>
+    <p class="intro" id="intro"></p>
+    <div class="jump" id="jump"></div>
+  </div>
+</header>
+<main id="chapters"></main>
+<footer><span id="owner"></span><div id="footer-links"></div></footer>
+
+<script>
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const sections = SITE.sections.filter(s => (s.items || s.groups).length);
+const links = SITE.links.map(l => `<a href="${esc(l.url)}">${esc(l.label)}</a>`).join("");
+document.getElementById("name").textContent = SITE.name;
+document.getElementById("owner").textContent = SITE.name;
+document.getElementById("footer-links").innerHTML = links;
+
+function savedLanguage() {
+  const wanted = new URLSearchParams(location.search).get("lang");
+  let stored = null;
+  try { stored = localStorage.getItem("lang"); } catch (e) {}
+  return [wanted, stored].find(x => LANGUAGES.some(l => l[0] === x)) || "en";
+}
+let lang = savedLanguage();
+const L = x => typeof x === "string" ? x : (x[lang] || x.en);
+const T = x => esc(L(x));
+
+function stackHTML(s) {
+  return `<div class="stack">${s.groups.map(g => `
+    <div><h3>${T(g.name)}</h3><ul>${g.tools.map(t => `<li>${esc(t)}</li>`).join("")}</ul></div>`).join("")}</div>`;
+}
+function metaFor(item) {
+  let out = "";
+  if (item.tools && item.tools.length) out += `<span>${esc(item.tools.join(", "))}</span>`;
+  if (item.repo) out += `<a href="${esc(item.repo)}">${T(UI.code)}</a>`;
+  if (item.site) out += `<a href="${esc(item.site)}">${T(UI.site)}</a>`;
+  if (item.link) out += `<a href="${esc(item.link)}">${T(UI.result)}</a>`;
+  return out;
+}
+function more(item) {
+  if (!item.details) return "";
+  return `<details><summary>${T(UI.more)}</summary><div>${L(item.details).split("\n\n").map(p => `<p>${esc(p)}</p>`).join("")}</div></details>`;
+}
+function timelineHTML(s) {
+  return `<ol class="timeline">${s.items.map(item => `
+    <li><div class="period">${T(item.period)}</div><h3>${T(item.title)}</h3><p class="org">${T(item.org)}</p></li>`).join("")}</ol>`;
+}
+function entriesHTML(s) {
+  return `<div>${s.items.map(item => `
+    <article class="entry">
+      <h3>${T(item.title)}</h3>
+      <p>${T(item.summary)}</p>
+      <div class="meta">${metaFor(item)}</div>
+      ${more(item)}
+    </article>`).join("")}</div>`;
+}
+function renderPage() {
+  document.documentElement.lang = lang === "zh" ? "zh-CN" : lang;
+  document.getElementById("intro").textContent = L(SITE.intro);
+  document.getElementById("lang").innerHTML = LANGUAGES.map(([code, label, full]) =>
+    `<button type="button" data-lang="${code}" aria-label="${full}" aria-pressed="${code === lang}">${label}</button>`).join("");
+  document.getElementById("jump").innerHTML = sections.map(s => `<a href="#${esc(s.id)}">${T(s.title)}</a>`).join("");
+  document.getElementById("chapters").innerHTML = sections.map(s => `
+    <section class="chapter" id="${esc(s.id)}">
+      <h2>${T(s.title)}</h2>
+      ${s.groups ? stackHTML(s) : s.timeline ? timelineHTML(s) : entriesHTML(s)}
+    </section>`).join("");
+}
+renderPage();
+
+document.getElementById("lang").addEventListener("click", e => {
+  const button = e.target.closest("button[data-lang]");
+  if (!button || button.dataset.lang === lang) return;
+  lang = button.dataset.lang;
+  try { localStorage.setItem("lang", lang); } catch (err) {}
+  const hero = document.querySelector(".hero"), before = hero.clientHeight;
+  renderPage();
+  if (hero.clientHeight !== before) drawSky(false);
+  document.querySelector(`#lang button[data-lang="${lang}"]`).focus();
+});
+
+/* The hero drawing: weather-chart isobars that settle into the contours of a
+   posterior distribution, with a flight path that becomes a real Metropolis chain. */
+function drawSky(animate) {
+  const svg = document.getElementById("sky");
+  const hero = svg.parentElement;
+  const W = hero.clientWidth, H = hero.clientHeight, narrow = W < 760;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.setAttribute("preserveAspectRatio", "xMidYMid slice");
+  svg.classList.toggle("still", !animate);
+
+  const S = Math.min(W, H);
+  const peaks = (narrow
+    ? [[.66,.22,.17,1],[.86,.36,.11,.72],[.34,.33,.10,.6]]
+    : [[.69,.38,.19,1],[.87,.64,.12,.74],[.56,.72,.10,.56]]
+  ).map(([u,v,s,a]) => ({x:u*W, y:v*H, s:s*S, a}));
+  const density = (x,y) => peaks.reduce((t,p) => t + p.a*Math.exp(-((x-p.x)**2+(y-p.y)**2)/(2*p.s*p.s)), 0);
+  const smooth = (a,b,x) => { const t = Math.max(0,Math.min(1,(x-a)/(b-a))); return t*t*(3-2*t); };
+  const field = (x,y) => {
+    const u = x/S, v = y/S;
+    const isobar = .22 + .16*Math.sin(1.5*u + .9*Math.sin(1.3*v+.4) + .5) + .11*Math.cos(2.4*v - .9*u + 1.2) + .05*Math.sin(3.4*u+2.1*v);
+    const t = narrow ? smooth(.72*H,.34*H,y) : smooth(.2*W,.58*W,x);
+    return (1-t)*isobar + t*density(x,y)*.92 + t*.02;
+  };
+
+  const step = narrow ? 5 : 7, nx = Math.ceil(W/step)+2, ny = Math.ceil(H/step)+2, g = [];
+  for (let j=0;j<ny;j++) for (let i=0;i<nx;i++) g.push(field(i*step,j*step));
+  const lv = 20, lo = .03, hi = .9, paths = [];
+  const mix = (a,b,t) => a.map((c,i)=>Math.round(c+(b[i]-c)*t));
+  const stops = [[150,160,212],[140,149,204],[201,166,196],[238,180,170]];
+  for (let k=0;k<lv;k++) {
+    const L = lo + (hi-lo)*k/(lv-1); let d = "";
+    for (let j=0;j<ny-1;j++) for (let i=0;i<nx-1;i++) {
+      const a=g[j*nx+i], b=g[j*nx+i+1], c=g[(j+1)*nx+i+1], e=g[(j+1)*nx+i];
+      const x=i*step, y=j*step, pts=[];
+      if ((a<L)!==(b<L)) pts.push([x+step*(L-a)/(b-a), y]);
+      if ((b<L)!==(c<L)) pts.push([x+step, y+step*(L-b)/(c-b)]);
+      if ((e<L)!==(c<L)) pts.push([x+step*(L-e)/(c-e), y+step]);
+      if ((a<L)!==(e<L)) pts.push([x, y+step*(L-a)/(e-a)]);
+      if (pts.length===2 || pts.length===4)
+        for (let q=0;q<pts.length;q+=2)
+          d += `M${pts[q][0].toFixed(1)} ${pts[q][1].toFixed(1)}L${pts[q+1][0].toFixed(1)} ${pts[q+1][1].toFixed(1)}`;
+    }
+    const f = k/(lv-1)*3, n = Math.min(2,Math.floor(f)), col = mix(stops[n],stops[n+1],f-n);
+    paths.push(`<path d="${d}" stroke="rgb(${col})" stroke-opacity="${(.5+.4*k/(lv-1)).toFixed(2)}" stroke-width="1"/>`);
+  }
+
+  let seed = 20240609; const rnd = () => { seed|=0; seed=seed+0x6D2B79F5|0; let t=Math.imul(seed^seed>>>15,1|seed); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; };
+  const gauss = () => Math.sqrt(-2*Math.log(1-rnd()))*Math.cos(2*Math.PI*rnd());
+  const top = peaks[0], sx=-20, sy=H*(narrow?.1:.2), mx=W*(narrow?.3:.32), my=H*(narrow?.02:.05);
+  const bez = t => [(1-t)**2*sx+2*(1-t)*t*mx+t*t*top.x, (1-t)**2*sy+2*(1-t)*t*my+t*t*top.y];
+  let trail = ""; for (let t=0;t<=1.0001;t+=.02){const p=bez(t); trail += (t?"L":"M")+p[0].toFixed(1)+" "+p[1].toFixed(1);}
+  let cur=[top.x,top.y], dots="";
+  const chain=[cur];
+  for (let n=0, kept=0; n<400 && kept<34; n++) {
+    const prop=[cur[0]+gauss()*S*.06, cur[1]+gauss()*S*.06];
+    if (rnd() < density(...prop)/density(...cur)) {
+      cur=prop; kept++; chain.push(cur);
+      dots+=`<circle cx="${cur[0].toFixed(1)}" cy="${cur[1].toFixed(1)}" r="1.9"/>`;
+    }
+  }
+  for (let i=1;i<chain.length;i++) {
+    const p=chain[i], q=chain[i+1]||p, end=[(p[0]+q[0])/2,(p[1]+q[1])/2];
+    trail+=`Q${p[0].toFixed(1)} ${p[1].toFixed(1)} ${end[0].toFixed(1)} ${end[1].toFixed(1)}`;
+  }
+  const a=bez(.34), b=bez(.36), angle=Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI;
+  svg.innerHTML = `
+    <g class="contours" fill="none" stroke-linecap="round">${paths.join("")}</g>
+    <path class="trail" d="${trail}" pathLength="1" fill="none" stroke="#3D4270" stroke-opacity=".55" stroke-width="1" stroke-linejoin="round"/>
+    <g class="after" fill="#3D4270" fill-opacity=".7">${dots}</g>
+    <path class="plane" transform="translate(${a[0].toFixed(1)} ${a[1].toFixed(1)}) rotate(${angle.toFixed(1)}) scale(.92)" fill="#3D4270"
+      d="M15 0c0-1.3-1.4-1.9-3-1.9H6L0-10H-3L0-1.9H-7L-9.6-5H-12L-10.5 0-12 5h2.4L-7 1.9H0L-3 10H0L6 1.9h6c1.6 0 3-.6 3-1.9z"/>`;
+}
+drawSky(true);
+let lastW = innerWidth, timer;
+addEventListener("resize", () => {
+  if (Math.abs(innerWidth-lastW) < 30) return;
+  clearTimeout(timer); timer = setTimeout(() => { lastW = innerWidth; drawSky(false); }, 150);
+});
+</script>
+</body>
+</html>
